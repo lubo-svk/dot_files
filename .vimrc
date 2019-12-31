@@ -21,7 +21,7 @@
     Plugin 'scrooloose/nerdtree'
     Plugin 'terryma/vim-expand-region'
     Plugin 'terryma/vim-multiple-cursors'
-    Plugin 'yuttie/comfortable-motion.vim'
+"    Plugin 'yuttie/comfortable-motion.vim'
     "...All your other bundles...
     if iCanHazVundle == 0
         echo "Installing Vundles, please ignore key map error messages"
@@ -32,7 +32,7 @@
     call vundle#end() 
     "must be last
     filetype plugin indent on " load filetype plugins/indent settings
-    colorscheme solarized
+"    colorscheme solarized
     syntax on                      " enable syntax
  
 " Setting up Vundle - the vim plugin bundler end
@@ -44,8 +44,11 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 set tabstop=4 shiftwidth=4 expandtab
 
-packadd YouCompleteMe
+" packadd YouCompleteMe
 
 set number
 set relativenumber
 set splitright
+set incsearch
+set hlsearch
+set ignorecase
