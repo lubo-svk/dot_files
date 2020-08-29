@@ -22,6 +22,8 @@
     Plugin 'terryma/vim-multiple-cursors'
     Plugin 'junegunn/fzf'
     Plugin 'junegunn/fzf.vim'
+    Plugin 'vim-airline/vim-airline'
+    Plugin 'vim-airline/vim-airline-themes'
 "    Plugin 'yuttie/comfortable-motion.vim'
     "...All your other bundles...
     if iCanHazVundle == 0
@@ -48,6 +50,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let NERDTreeShowLineNumbers=1
 " make sure relative line numbers are used
 autocmd FileType nerdtree setlocal relativenumber
+
+" add airline arrows
+let g:airline_powerline_fonts = 1
 
 map <C-p> :Files<CR>
 set tabstop=4 shiftwidth=4 expandtab
