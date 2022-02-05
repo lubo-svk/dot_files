@@ -24,6 +24,7 @@
     Plugin 'junegunn/fzf.vim'
     Plugin 'vim-airline/vim-airline'
     Plugin 'vim-airline/vim-airline-themes'
+    Plugin 'Valloric/YouCompleteMe'
 "    Plugin 'yuttie/comfortable-motion.vim'
     "...All your other bundles...
     if iCanHazVundle == 0
@@ -57,7 +58,6 @@ let g:airline_powerline_fonts = 1
 map <C-p> :Files<CR>
 set tabstop=4 shiftwidth=4 expandtab
 
-"packadd YouCompleteMe
 
 set number
 set relativenumber
@@ -68,4 +68,11 @@ set ignorecase
 
 set cursorline
 hi CursorLine term=bold cterm=bold guibg=Grey40
+
+let mapleader=","
+nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>go :YcmCompleter GoTo<CR>
+
 
